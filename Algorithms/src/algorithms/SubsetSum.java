@@ -95,7 +95,7 @@ class SubsetSum {
             return new int[]{-1, -1};
         } else {//currentSum>s, increase start index
             if (start + 1 < n) {
-                if (start == end) {
+                if (start == end) {//increase both start and end index
                     return findsum(arr, n, s, arr[start + 1], start + 1, end + 1);
                 }
 
