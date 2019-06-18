@@ -26,8 +26,9 @@ class SubsetSum {
     }
 
     /**
-     * Gets the starting and ending index that contains the subarray which has a
+     * Prints to console the starting and ending index that contains the subarray which has a
      * sum of s, prints -1 if no subarray is found
+     * also prints some other infomation to show you how the system interpreted the inputs
      *
      * @param args array of strings which are posative integers, the first value
      * is the sum to search for and the remaining values are the array to search
