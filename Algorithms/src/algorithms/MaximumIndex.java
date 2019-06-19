@@ -22,7 +22,7 @@ public class MaximumIndex {
     public static void main(String[] args) {
 
         try {
-           int n = args.length - 1;
+           int n = args.length;
            Integer arr[] = new Integer[n];
            for (int i = 0; i < n; i++) {
                arr[i] = Integer.parseInt(args[i]);
