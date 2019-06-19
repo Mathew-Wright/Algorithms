@@ -29,20 +29,16 @@ public class FindingNonPairs {
     public static void main(String[] args) {
 
         try {
-           int n = args.length - 1;
-           Integer arr[] = new Integer[n*2+2];
+           int n = args.length;
+           Integer arr[] = new Integer[n];
            for (int i = 0; i < n; i++) {
                arr[i] = Integer.parseInt(args[i]);
                
-               if (arr[i] < 0){
-                   System.out.println("received negative interger value");
-                   return;
-               }
            }
 
            System.out.println("array to search: " + Arrays.toString(arr));
 
-           System.out.println(findNonPairs(arr));
+           System.out.println(Arrays.toString(findNonPairs(arr)));
         } catch (NumberFormatException e){
             System.out.println("received non interger value");
         }
@@ -61,13 +57,15 @@ public class FindingNonPairs {
 	    
 	    for (Integer i : arr){
 	        
-	        boolean removed = freq.remove(i, 1);
+	        boolean removed = freq.remove(i, 1);//remove key if it allready exists
 	        
-	        if (!removed){
+	        if (!removed){//add the key if it didn't exist
 	            freq.put(i,1);
 	        }
 	    }
-	    
+            
+	    //store the keys in array that are 
+            //still remaining in the hash map (these are integers with no paired value)
 	    Integer[] result = new Integer[2];
 	    int i = 0;
 	    Set<Integer> keys = freq.keySet();
@@ -77,6 +75,7 @@ public class FindingNonPairs {
 	        
 	    }
 	    
+            //sort the array in ascending order
 	    if (result[0] > result[1]){
 	        Integer b = result[0];
 	        result[0] = result[1];
