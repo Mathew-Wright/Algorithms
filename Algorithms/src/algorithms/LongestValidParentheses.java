@@ -17,6 +17,11 @@ import java.util.Stack;
  */
 public class LongestValidParentheses {
 
+    /**
+     * Gets the length of the longest valid parentheses in the given string
+     *
+     * @param args the string to search
+     */
     public static void main(String[] args) {
 
         System.out.println("string to search: " + args[0]);
