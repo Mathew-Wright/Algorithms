@@ -64,6 +64,7 @@ class AllPairsGivenSum {
             }
 
             ArrayList<int[]> result = findAllPairsWithSum(nums1, nums2, s);
+            System.out.print("output: ");
             if (result.isEmpty()) {
                 System.out.println(-1);
             } else {
