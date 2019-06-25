@@ -75,7 +75,7 @@ public class WordBoggle {
 
             WordBoggle wordBoggle = new WordBoggle();
             ArrayList<String> result = wordBoggle.boggle(dict, board, y, x);
-
+            System.out.print("output: ");
             for (String s : result) {
                 System.out.print(s + " ");
             }
