@@ -38,7 +38,7 @@ public class FindingNonPairs {
 
            System.out.println("array to search: " + Arrays.toString(arr));
 
-           System.out.println(Arrays.toString(findNonPairs(arr)));
+           System.out.println("output: "+(Arrays.toString(findNonPairs(arr))));
         } catch (NumberFormatException e){
             System.out.println("received non interger value");
         }
