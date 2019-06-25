@@ -87,8 +87,8 @@ class Node
 /**
  * Given a binary tree, your task is to complete the function minDepth which 
  * takes one argument the root of the binary tree and prints the min depth of binary tree.
- * The min depth of a binary tree is the row in the tree which the first null
- * value occurs at.
+ * The min depth of a binary tree is the number of nodes you have to visit to reach
+ * a leaf node (including the leaf node)
  * 
  *           1
  *         /    \
@@ -123,37 +123,29 @@ class Node
  * https://practice.geeksforgeeks.org/problems/minimum-depth-of-a-binary-tree/1
  * @author Mathew Wright
  */
-class MinDepthHandler{
-    public int minDepth(Node root){
-        
-        ArrayList<Node> row = new ArrayList<>();//current row with no nulls
-        ArrayList<Node> childRow = new ArrayList<>();//buffer for the children of the current row
-        row.add(root);
-        if (root.left == null && root.right == null){
+class MinDepthHandler {
+
+    public int minDepth(Node root) {
+
+        if (root == null) {//edge case when called root == null
             return 0;
         }
-        
-        int rowIndex = 0;
-        while (!row.isEmpty()){//while there are still nodes that havent had its children checked
-            rowIndex++;//children exist, so increment counter
-            for (Node n : row){//for each node in current row
-                
-                Node l = n.left;
-                Node r = n.right;
-                
-                if (l != null && r != null){
-                    childRow.add(l);
-                    childRow.add(r);
-                }
-                else{//l or r where null, so this is the minimum depth
-                    return rowIndex;
-                }
-                
-            }   
-            row = childRow;
-            childRow = new ArrayList<>();
-            
+
+        // Base case, Leaf Node
+        if (root.left == null && root.right == null) {
+            return 1;
         }
-        return rowIndex;
+
+        //if left is null, only check right tree
+        if (root.left == null) {
+            return minDepth(root.right) + 1;
+        }
+
+        //if right is null, only check rigleftht tree
+        if (root.right == null) {
+            return minDepth(root.left) + 1;
+        }
+
+        return Math.min(minDepth(root.left), minDepth(root.right)) + 1;//recursivly check both nodes
     }
 }
