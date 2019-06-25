@@ -36,6 +36,7 @@ class HasTripletSumZero {
                 a[i] = sc.nextInt();
             }
             Triplet g = new Triplet();
+            System.out.print("output: ");
             if (g.findTriplets(a, n)) {
                 System.out.println("1");
             } else {
