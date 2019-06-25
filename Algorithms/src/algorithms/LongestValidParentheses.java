@@ -26,7 +26,7 @@ public class LongestValidParentheses {
 
         System.out.println("string to search: " + args[0]);
 
-        System.out.println(findLongestValidParentheses(args[0]));
+        System.out.println("output: "+(findLongestValidParentheses(args[0])));
 
     }
 
