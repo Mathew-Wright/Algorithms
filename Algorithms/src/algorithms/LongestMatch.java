@@ -36,7 +36,7 @@ class LongestMatch {
 
             String word = scan.next();
 
-            System.out.println(longestMatch(dict, word));
+            System.out.println("output: "+(longestMatch(dict, word)));
 
             testCases--;
         }
