@@ -19,7 +19,7 @@ class SubsetSum {
      * Basic method that prints error message to console
      */
     public static void usage() {
-        System.out.println("Incorrect use of function\n"
+        System.out.println("Incorrect use of function (this function does not use Scanner, please call with main with args)\n"
                 + "please input only posative integers\n"
                 + "the first integer should be the sum you want to find\n"
                 + "the remaining intergers form the subarray");
