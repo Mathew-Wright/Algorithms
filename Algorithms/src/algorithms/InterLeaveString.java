@@ -42,7 +42,7 @@ class InterLeaveString {
             String c = sc.next();
             GfG g = new GfG();
 
-            System.out.println(g.isInterLeave(a, b, c) == true ? 1 : 0);
+            System.out.println("output: "+(g.isInterLeave(a, b, c) == true ? 1 : 0));
             t--;
         }
     }
