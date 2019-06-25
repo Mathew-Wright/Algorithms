@@ -126,17 +126,17 @@ class Node
 class MinDepthHandler{
     public int minDepth(Node root){
         
-        ArrayList<Node> row = new ArrayList<>();
-        ArrayList<Node> childRow = new ArrayList<>();
+        ArrayList<Node> row = new ArrayList<>();//current row with no nulls
+        ArrayList<Node> childRow = new ArrayList<>();//buffer for the children of the current row
         row.add(root);
         if (root.left == null && root.right == null){
             return 0;
         }
         
         int rowIndex = 0;
-        while (!row.isEmpty()){
-            rowIndex++;
-            for (Node n : row){
+        while (!row.isEmpty()){//while there are still nodes that havent had its children checked
+            rowIndex++;//children exist, so increment counter
+            for (Node n : row){//for each node in current row
                 
                 Node l = n.left;
                 Node r = n.right;
@@ -145,7 +145,7 @@ class MinDepthHandler{
                     childRow.add(l);
                     childRow.add(r);
                 }
-                else{
+                else{//l or r where null, so this is the minimum depth
                     return rowIndex;
                 }
                 
