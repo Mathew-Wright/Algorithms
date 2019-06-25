@@ -55,7 +55,7 @@ public class DecodeCombinations {
 
             }
 
-            System.out.println(decodeCombinations(nums));
+            System.out.println("output: "+(decodeCombinations(nums)));
 
             testCases--;
         }
