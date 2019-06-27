@@ -79,10 +79,14 @@ class LookAndSay {
             for (int j = 0; j < lastIttr.length(); j++) {
                 String s = String.valueOf(lastIttr.charAt(j));
 
+                //get previous char
                 NumberCountPair recent = numberCounts.getFirst();
+                
                 if (recent.getNumber().equals(s)) {
+                    //if previous char == current char, increment its count
                     recent.increment();
                 } else {
+                    //add the new char as the new most recent char
                     numberCounts.addFirst(new NumberCountPair(s));
                 }
 
@@ -102,30 +106,54 @@ class LookAndSay {
 
     }
 
+    /**
+     * Stores a string (which represents a number) and the number of times it occured
+     */
     class NumberCountPair {
 
-        String n;
-        int c;
+        private String n;
+        private int c;
 
+        /**
+         * Constructor method, initialises a number count pair for the number n
+         * with initial occurrence count = 1
+         * @param n the number (as string) that this pair is for
+         */
         public NumberCountPair(String n) {
             this.n = n;
             c = 1;
         }
 
+        /**
+         * Increments occurrence counter
+         */
         public void increment() {
             c++;
         }
 
+        /**
+         * Gets the number (as string) that the pair represents
+         * @return that the pair represents
+         */
         public String getNumber() {
             return n;
         }
 
+        /**
+         * Gets the number of times the number occurred
+         * @return 
+         */
         public int getCount() {
             return c;
         }
 
+        /**
+         * Gets the NumberCountPair as a string
+         * @return NumberCountPair as a string
+         */
+        @Override
         public String toString() {
-            if (n == "") {
+            if ("".equals(n)) {
                 return "";
             }
             return "" + c + n;
