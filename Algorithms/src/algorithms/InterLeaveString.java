@@ -40,19 +40,12 @@ class InterLeaveString {
             String a = sc.next();
             String b = sc.next();
             String c = sc.next();
-            GfG g = new GfG();
+            InterLeaveString interleaveString = new InterLeaveString();
 
-            System.out.println("output: "+(g.isInterLeave(a, b, c) == true ? 1 : 0));
+            System.out.println("output: "+(interleaveString.isInterLeave(a, b, c) == true ? 1 : 0));
             t--;
         }
     }
-}
-
-
-/*This is a function problem.You only need to complete the function given below*/
- /*you are required to complete this method */
-
-class GfG {
 
     public boolean isInterLeave(String a, String b, String c) {
 
