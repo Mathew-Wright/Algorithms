@@ -71,6 +71,13 @@ class FibonacciSubsequence {
         }
     }
 
+    /**
+     * Given a sequence of positive ints and the maximum value from the sequence
+     * remove and values from the sequence which are not fibonacci numbers
+     * @param seq the sequence to check
+     * @param max the max value from the sequence
+     * @return 
+     */
     private static List<Integer> getLargestFibSequence(int[] seq, int max) {
 
         int previousNumber = 0;
