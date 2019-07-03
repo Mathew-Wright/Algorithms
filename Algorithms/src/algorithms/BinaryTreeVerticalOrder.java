@@ -31,11 +31,11 @@ class BinaryTreeNode {
  * tree in vertical order. If there are multiple nodes passing through a
  * vertical line, then they should printed as they appear in preorder traversal.
  *
- * 1
+ *          1
  *         / \
- * 2 3
- *             /
- * 5
+ *        2   3
+ *           /
+ *          5
  * As it is evident from the above diagram that during vertical traversal 2 will
  * come first, then 1 and 5, and then 3. So output is 2 1 5 3
  *
