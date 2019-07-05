@@ -8,12 +8,13 @@ package algorithms;
 import java.util.Scanner;
 
 //G4G Node class
-class BinaryNode {
+class BinaryTreeNodeChar {
 
     char data;
-    BinaryNode left, right;
+    BinaryTreeNodeChar left;
+    BinaryTreeNodeChar right;
 
-    BinaryNode(char key) {
+    BinaryTreeNodeChar(char key) {
         data = key;
         left = right = null;
     }
@@ -68,13 +69,13 @@ class ConvertTernaryExpressionToBinaryTree {
      * @param i index point (first call = 0)
      * @return the expression from i to end of expression as binary tree
      */
-    public BinaryNode convertExp(String str, int i) {
+    public BinaryTreeNodeChar convertExp(String str, int i) {
 
         if (i > str.length()) {
             return null;
         }
 
-        BinaryNode root = new BinaryNode(str.charAt(i));
+        BinaryTreeNodeChar root = new BinaryTreeNodeChar(str.charAt(i));
         i++;
         if (i < str.length() && str.charAt(i) == '?') {
             root.left = convertExp(str, i + 1);
@@ -90,7 +91,7 @@ class ConvertTernaryExpressionToBinaryTree {
      * Prints the binary tree via in order traversal
      * @param node the root / starting node to print from
      */
-    public static void printInorder(BinaryNode node) {
+    public static void printInorder(BinaryTreeNodeChar node) {
         if (node == null) {
             return;
         }
