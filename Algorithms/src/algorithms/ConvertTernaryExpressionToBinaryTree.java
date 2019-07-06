@@ -7,18 +7,6 @@ package algorithms;
 
 import java.util.Scanner;
 
-//G4G Node class
-class BinaryTreeNodeChar {
-
-    char data;
-    BinaryTreeNodeChar left;
-    BinaryTreeNodeChar right;
-
-    BinaryTreeNodeChar(char key) {
-        data = key;
-        left = right = null;
-    }
-}
 
 /**
  * Given a string that contains ternary expressions. 
