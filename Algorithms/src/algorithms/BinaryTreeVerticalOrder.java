@@ -8,21 +8,6 @@ package algorithms;
 import java.util.Scanner;
 import java.util.*;
 
-/**
- * Class for binary tree
- *
- * @author G4G
- */
-class BinaryTreeNode {
-
-    int data;
-    BinaryTreeNode left, right;
-
-    BinaryTreeNode(int key) {
-        data = key;
-        left = right = null;
-    }
-}
 
 /**
  * You are given a binary tree for which you have to print its vertical order
