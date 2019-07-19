@@ -62,7 +62,7 @@ public class FirstNonRepeatingCharAtEachIndex {
                 arr[i] = str[i];
             }
             System.out.print("output: ");
-            for (String i : firstNonRepeatingAtEachIndex(arr)) {
+            for (String i : firstNonRepeatingAtEachIndexHandler(arr)) {
                 System.out.print(i + " ");
 
             }
@@ -79,7 +79,7 @@ public class FirstNonRepeatingCharAtEachIndex {
      * @return for each index i in array, value at i is the first non repeating string
      * from index 0 to i in given array, -1 if none found.
      */
-    private static String[] firstNonRepeatingAtEachIndex(String[] arr) {
+    private static String[] firstNonRepeatingAtEachIndexHandler(String[] arr) {
         HashMap<String, Integer> freq = new HashMap<>();
         Queue<String> queue = new LinkedList<>();
         String[] result = new String[arr.length];
