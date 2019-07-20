@@ -23,14 +23,16 @@ public class KnapsackProblem {
      * unique items into the knapsack without exceeding the max capacity.
      *
      * Input:
-     * The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case consists of four lines.
+     * The first line of input contains an integer T denoting the number of test cases. 
+     * Then T test cases follow. Each test case consists of four lines.
      * The first line consists of N the number of items.
      * The second line consists of W, the maximum capacity of the knapsack.
      * In the next line are N space separated positive integers denoting the values of the N items,
      * and in the fourth line are N space separated positive integers denoting the weights of the corresponding items.
      * 
      * Output:
-     * For each testcase, in a new line, print the maximum possible value you can get with the given conditions that you can obtain for each test case in a new line.
+     * For each test case, in a new line, print the maximum possible value you can get 
+     * with the given conditions that you can obtain for each test case in a new line.
      * 
      * 
      * Example:
