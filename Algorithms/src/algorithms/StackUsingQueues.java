@@ -87,6 +87,8 @@ class StackUsingQueuesHandler {
      * @return popped element, -1 if no element
      */
     public int pop() {
+        
+        //2 queue implementation
         if (q1.isEmpty()) {
             return -1;
         }
@@ -98,6 +100,16 @@ class StackUsingQueuesHandler {
             q1.add(q2.poll());
         }
         return result;
+        
+        //1 queue implementation, faster
+        //if (q1.size() == 0){
+	//        return -1;
+	//    }
+	//    int size = q1.size();
+	//    for (int i = 1; i < q1.size(); i++){
+	//        q1.add(q1.poll());
+	//    }
+	//    return q1.poll();
     }
 
     /**
