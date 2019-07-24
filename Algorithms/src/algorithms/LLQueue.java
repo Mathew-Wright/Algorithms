@@ -50,7 +50,7 @@ public class LLQueue {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t > 0) {
-            MyQueue obj = new MyQueue();
+            LLQueueHandler obj = new LLQueueHandler();
             int Q = sc.nextInt();
             
             while (Q > 0) {
@@ -72,13 +72,18 @@ public class LLQueue {
     }
 }
 
-
-class MyQueue {
+/**
+ * Class for queue implemented using LL
+ * @author Mathew Wright
+ */
+class LLQueueHandler {
 
     LLNode front, rear;
 
-    // This function should add an item at
-    // rear
+    /**
+     * Push element onto queue
+     * @param a element to push
+     */
     void push(int a) {
         LLNode n = new LLNode(a);
         if (front == null) {
@@ -92,9 +97,10 @@ class MyQueue {
 
     }
 
-    // This function should remove front
-    // item from queue and should return
-    // the removed item.
+    /**
+     * Remove and return first element on queue, -1 if empty.
+     * @return first element on queue, -1 if empty
+     */
     int pop() {
         int data;
         if (front == null) {
