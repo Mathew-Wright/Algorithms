@@ -88,7 +88,7 @@ class MaxRectFromHistogram {
             } else {//new rectangle may not be starting, need to check if its new or continues from previous
 
                 int h;
-                int w = -1;
+                int w = -1;//w also used as flag to tell if if went into while loop atleast once
                 while (!height.empty() && height.peek() > bars[i]) {
                     //rect continues from previous
                     //rectangle with height stored in height.peek() has ended
@@ -105,7 +105,7 @@ class MaxRectFromHistogram {
                     pos.push(w);
                     height.push(bars[i]);
                 } 
-                else if (!height.empty() && height.peek() < bars[i]) {//new rectangle, rect did not continue 
+                else{//new rectangle, rect did not continue 
                     pos.push(i);
                     height.push(bars[i]);
                 }
