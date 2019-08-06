@@ -7,11 +7,20 @@ package algorithms;
 
 import java.util.*;
 
+/**
+ * Given a linked list consisting of L nodes and given a number N. 
+ * Find the Nth node from the end of the linked list.
+ * https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1
+ * @author Mathew Wright
+ */
 public class NthLastNodeOfLL {
 
     LLNode head;
 
-    /* Function to print linked list */
+    /**
+     * Prints Linked List to console (G4G)
+     * @param head 
+     */
     void printList(LLNode head) {
         LLNode temp = head;
         while (temp != null) {
@@ -21,7 +30,10 @@ public class NthLastNodeOfLL {
         System.out.println();
     }
 
-    /* Inserts a new Node at front of the list. */
+    /**
+     * Inserts a new Node at front of the list (G4G).)
+     * @param node node to add
+     */
     public void addToTheLast(LLNode node) {
         if (head == null) {
             head = node;
