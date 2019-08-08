@@ -24,19 +24,22 @@ public class IsCircularLL {
      * @param head head of LL
      * @return true if LL is circular, false otherwise.
      */
-    boolean isCircular(LLNode head) {
-        HashMap<LLNode, Integer> map = new HashMap<>();
-
-        while (head != null) {
-            if (map.containsKey(head)) {
-                return true;
-            }
-            map.put(head, 1);
-            head = head.next;
-
+    boolean isCircular(LLNode head){
+        if (head == null){//empty LL = circular
+            return true;
         }
-        return false;
-
+    	LLNode temp = head;
+    	
+    	while(temp != null){
+    	    temp = temp.next;
+    	    if (head==temp){
+    	        return true;
+    	    }
+    	    
+    	}
+    	return false;
+    	
+    	
     }
 
     /**
