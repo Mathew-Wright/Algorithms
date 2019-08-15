@@ -76,7 +76,7 @@ public class CoinChange {
      * Given int k which represents change we wish to produce and range a of
      * avaliable coins (each coin as infinite supply),
      * returns number of combinations that can produce k change using range of
-     * avaliable cois.
+     * avaliable coins.
      * @param coins range of avaliable coins
      * @param k sum of change we wish to produce.
      * @return 
