@@ -35,7 +35,16 @@ public class LargestZigZagInSeq {
      *
      *
      *
-     * Example: Input: 2 3 3 1 2 4 8 5 6 9 7 3 4 2 1 3 9 6 11 3 15 Output: 18 28
+     * Example: 
+     * Input: 
+     * 2 
+     * 3 
+     * 3 1 2 4 8 5 6 9 7 
+     * 3 
+     * 4 2 1 3 9 6 11 3 15 
+     * Output: 
+     * 18 
+     * 28
      *
      * @param args
      * @throws IOException
@@ -56,7 +65,7 @@ public class LargestZigZagInSeq {
 
             }
 
-            System.out.println("output; " + largestZigZag(arr));
+            System.out.println("output " + largestZigZag(arr));
 
             t--;
         }
@@ -75,7 +84,7 @@ public class LargestZigZagInSeq {
             return 0;
         }
         if (arr[0].length < 2) {
-            return -Integer.MIN_VALUE;
+            return Integer.MIN_VALUE;
         }
         int[][] reducedArr = new int[arr.length][4];
 
@@ -109,7 +118,7 @@ public class LargestZigZagInSeq {
         }
 
         //get largest element
-        int result = -Integer.MIN_VALUE;
+        int result = Integer.MIN_VALUE;
         for (int i = 0; i <= 2; i += 2) {
             result = Math.max(result, reducedArr[reducedArr.length - 1][i]);
         }
