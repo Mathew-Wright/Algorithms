@@ -78,7 +78,7 @@ class MaxSubArraySum {
     private int maxSubArraySum(int[] arr) {
 
         if (arr.length == 0) {
-            return -Integer.MIN_VALUE;
+            return Integer.MIN_VALUE;
         }
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
