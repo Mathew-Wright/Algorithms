@@ -75,7 +75,7 @@ public class LargestZigZagInSeq {
             return 0;
         }
         if (arr[0].length < 2) {
-            return -Integer.MAX_VALUE;
+            return -Integer.MIN_VALUE;
         }
         int[][] reducedArr = new int[arr.length][4];
 
@@ -109,7 +109,7 @@ public class LargestZigZagInSeq {
         }
 
         //get largest element
-        int result = -Integer.MAX_VALUE;
+        int result = -Integer.MIN_VALUE;
         for (int i = 0; i <= 2; i += 2) {
             result = Math.max(result, reducedArr[reducedArr.length - 1][i]);
         }
