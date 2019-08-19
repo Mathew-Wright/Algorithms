@@ -57,7 +57,7 @@ public class MaxIntervalOverlap {
             int in[] = new int[n];
             int out[] = new int[n];
 
-            StringBuilder sb = new StringBuilder();
+          
             String strIn[] = br.readLine().trim().split(" ");
             String strOut[] = br.readLine().trim().split(" ");
 

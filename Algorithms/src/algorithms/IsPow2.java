@@ -44,7 +44,6 @@ public class IsPow2 {
         int t = Integer.parseInt(br.readLine().trim());
         while (t > 0) {
 
-            StringBuilder sb = new StringBuilder();
             String str[] = br.readLine().trim().split(" ");
 
             long n = Long.parseLong(str[0]);

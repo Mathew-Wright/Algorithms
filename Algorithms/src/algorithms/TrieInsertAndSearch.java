@@ -121,7 +121,6 @@ public class TrieInsertAndSearch {
 
             int n = Integer.parseInt(br.readLine().trim());
 
-            StringBuilder sb = new StringBuilder();
             String str[] = br.readLine().trim().split(" ");
 
             String word = br.readLine().trim();

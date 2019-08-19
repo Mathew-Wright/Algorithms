@@ -49,7 +49,6 @@ public class KLargest {
         int t = Integer.parseInt(br.readLine().trim());
         while (t > 0) {
 
-            StringBuilder sb = new StringBuilder();
             String str[] = br.readLine().trim().split(" ");
 
             int n = Integer.parseInt(str[0]);

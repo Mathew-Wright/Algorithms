@@ -44,7 +44,6 @@ public class FirstNonRepatingChar {
 
             br.readLine();
 
-            StringBuilder sb = new StringBuilder();
             String str = br.readLine().trim().split(" ")[0];
 
             System.out.println("output: " + firstNonRepeatingChar(str));

@@ -59,7 +59,6 @@ public class LongestConsecutiveSubSequence {
             int n = Integer.parseInt(br.readLine().trim());
             int arr[] = new int[n];
 
-            StringBuilder sb = new StringBuilder();
             String str[] = br.readLine().trim().split(" ");
 
             for (int i = 0; i < n; i++) {

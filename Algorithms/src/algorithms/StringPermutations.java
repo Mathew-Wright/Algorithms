@@ -48,7 +48,7 @@ public class StringPermutations {
         int t = Integer.parseInt(br.readLine().trim());
         while (t > 0) {
 
-            StringBuilder sb = new StringBuilder();
+
             String str[] = br.readLine().trim().split(" ");
             System.out.print("output: ");
             LinkedList<String> res = permeate(str[0]);
